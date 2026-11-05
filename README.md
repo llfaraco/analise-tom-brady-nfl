@@ -1,54 +1,44 @@
-# 🏈 Análise de Dados: Dominância de Tom Brady na NFL
+# Tom Brady | Exercício de análise esportiva com Python
 
-## 📄 Introdução
+**Projeto de estudo · pandas · Dados definidos manualmente · Em revisão**
 
-Este projeto de portfólio visa quantificar a dominância estatística de Tom Brady, o quarterback mais vitorioso da história da NFL, utilizando análise de dados em Python.
+## Objetivo
 
-A análise foca em métricas de longevidade, consistência em vitórias na temporada regular e, principalmente, o sucesso na disputa e vitória do Super Bowl, contrastando seus números com o contexto geral da liga.
+Praticar a construção de um DataFrame e o cálculo de indicadores de temporadas, participações em Super Bowl e proporções de resultados.
 
-## 🎯 Objetivo da Análise
+O interesse em futebol americano conecta este exercício à minha trajetória de projetos, incluindo a [Yardline](https://yardlinefantasyfootball.com).
 
-1.  **Quantificar a Longevidade e Consistência:** Calcular a média de vitórias na temporada regular ao longo das 22 temporadas como titular.
-2.  **Medir o Sucesso em Playoffs:** Determinar o percentual de temporadas em que Brady chegou ao Super Bowl (SB).
-3.  **Avaliar a Taxa de Conversão:** Calcular o percentual de Super Bowls disputados que foram vencidos.
+## Arquivos e dependências
 
-## 🛠️ Tecnologias Utilizadas
+- `src/tom_brady_analise.py`: listas manuais, DataFrame, agregações e saída em Markdown.
+- Dependências: pandas, NumPy e tabulate.
 
-* **Linguagem:** Python
-* **Bibliotecas:** `Pandas` (para manipulação e agregação de dados)
-* **Ambiente:** Jupyter Notebook ou script Python.
+## Estado atual
 
-## 📊 Estrutura e Resultados
+A construção do DataFrame está bloqueada por uma inconsistência: a lista de temporadas e a lista de resultados de Super Bowl têm **21 elementos**, enquanto a lista de vitórias tem **22**.
 
-### Dados (Simulados)
+Por isso, os números apresentados na versão anterior do README não são mantidos como resultados validados. A base precisa ser alinhada por temporada e conferida com uma fonte histórica antes de qualquer conclusão.
 
-Para esta análise inicial de portfólio, foi criado um *DataFrame* simulado com as principais estatísticas de temporada (vitórias e resultado no SB) de Tom Brady entre 2001 e 2022.
+## Preparação do ambiente
 
-### Principais Métricas de Dominância:
+```bash
+git clone https://github.com/llfaraco/analise-tom-brady-nfl.git
+cd analise-tom-brady-nfl
+python -m pip install pandas numpy tabulate
+```
 
-| Métrica | Valor | Contexto NFL |
-| :--- | :--- | :--- |
-| **Total de Temporadas como Titular** | 22 | Longevidade incomparável |
-| **Total de Super Bowls Disputados** | 10 | Mais do que qualquer franquia da NFL |
-| **Total de Super Bowls Vencidos** | 7 | Mais do que qualquer franquia da NFL |
-| **Média de Vitórias por Temporada Regular** | ~11.95 | Acima da média da liga (8-9 vitórias) |
-| **% de Carreira que Chegou ao SB** | **45.45%** | Quase 50% de chance de chegar ao SB por ano |
+Após corrigir e validar os dados, o ponto de entrada é:
 
-### Conclusão
+```bash
+python src/tom_brady_analise.py
+```
 
-Os dados demonstram que Tom Brady não apenas estabeleceu novos patamares para a longevidade, mas também manteve uma consistência em vitórias de temporada regular (**média de 11.95 vitórias**) e uma taxa de sucesso em playoffs inédita. O fato de ter chegado a **10 Super Bowls** em 22 temporadas, convertendo **7 vitórias**, prova que ele foi um *outlier* estatístico e um fator de dominância em quase metade de sua carreira.
+O comando falha na criação do DataFrame enquanto a inconsistência permanecer.
 
-## ⚙️ Como Executar o Projeto
+## Aprendizados e evolução
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/](https://github.com/)[SEU-USUARIO]/tom-brady-dominancia-nfl.git
-    cd tom-brady-dominancia-nfl
-    ```
-2.  **Execute o script Python:**
-    ```bash
-    python src/tom_brady_analise.py
-    ```
+Alinhar cada observação a uma temporada, distinguir vitórias da equipe de vitórias atribuídas ao jogador, documentar fontes e evitar interpretar proporções históricas como probabilidades futuras. A prioridade é uma base coerente antes de uma conclusão atraente.
 
----
-*Desenvolvido por: [Lucas Faraco] 
+## Contato
+
+[Lucas Faraco](https://www.linkedin.com/in/lucasrfaraco) · [E-mail](mailto:lucas.rfaraco@gmail.com) · [Perfil e portfólio](https://github.com/llfaraco)
