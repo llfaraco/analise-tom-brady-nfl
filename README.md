@@ -1,44 +1,38 @@
-# Tom Brady | Exercício de análise esportiva com Python
+# Tom Brady | Indicadores históricos com fonte explícita
 
-**Projeto de estudo · pandas · Dados definidos manualmente · Em revisão**
+**Python · Validação de dados · Métricas descritivas**
 
-## Objetivo
+Exercício de análise esportiva com um resumo de carreira documentado. A versão anterior misturava listas de 21 e 22 elementos e não construía o DataFrame. A revisão substitui essa estrutura por um snapshot histórico e remove métricas de vitórias por temporada que não tinham uma base reconciliada.
 
-Praticar a construção de um DataFrame e o cálculo de indicadores de temporadas, participações em Super Bowl e proporções de resultados.
+## Executar
 
-O interesse em futebol americano conecta este exercício à minha trajetória de projetos, incluindo a [Yardline](https://yardlinefantasyfootball.com).
-
-## Arquivos e dependências
-
-- `src/tom_brady_analise.py`: listas manuais, DataFrame, agregações e saída em Markdown.
-- Dependências: pandas, NumPy e tabulate.
-
-## Estado atual
-
-A construção do DataFrame está bloqueada por uma inconsistência: a lista de temporadas e a lista de resultados de Super Bowl têm **21 elementos**, enquanto a lista de vitórias tem **22**.
-
-Por isso, os números apresentados na versão anterior do README não são mantidos como resultados validados. A base precisa ser alinhada por temporada e conferida com uma fonte histórica antes de qualquer conclusão.
-
-## Preparação do ambiente
-
-```bash
-git clone https://github.com/llfaraco/analise-tom-brady-nfl.git
-cd analise-tom-brady-nfl
-python -m pip install pandas numpy tabulate
-```
-
-Após corrigir e validar os dados, o ponto de entrada é:
+Somente biblioteca padrão do Python; validado com Python 3.12.
 
 ```bash
 python src/tom_brady_analise.py
+python -m unittest discover -s tests
 ```
 
-O comando falha na criação do DataFrame enquanto a inconsistência permanecer.
+## Resultados
 
-## Aprendizados e evolução
+| Métrica | Resultado |
+| --- | ---: |
+| Temporadas na carreira, 2000–2022 | 23 |
+| Participações em Super Bowl | 10 |
+| Títulos de Super Bowl | 7 |
+| Participações / temporadas de carreira | 43,48% |
+| Títulos / participações | 70% |
 
-Alinhar cada observação a uma temporada, distinguir vitórias da equipe de vitórias atribuídas ao jogador, documentar fontes e evitar interpretar proporções históricas como probabilidades futuras. A prioridade é uma base coerente antes de uma conclusão atraente.
+São proporções históricas, não probabilidades futuras. O denominador de 23 inclui 2000 e 2008; não é chamado de temporadas completas como titular.
 
-## Contato
+[Dados e fonte](data/career_summary.json) · [Saída calculada](artifacts/summary.json)
 
-[Lucas Faraco](https://www.linkedin.com/in/lucasrfaraco) · [E-mail](mailto:lucas.rfaraco@gmail.com) · [Perfil e portfólio](https://github.com/llfaraco)
+## Fonte e escopo
+
+Resumo conferido em 05/11/2026 na [publicação oficial dos Buccaneers de 01/02/2023](https://www.buccaneers.com/news/tom-brady-career-stats-records-nfl-2000-2022-patriots-bucs), que informa 23 temporadas, 10 Super Bowls e 7 títulos. O projeto transcreve apenas esses totais e calcula duas proporções; não apresenta uma base jogo a jogo nem uma comparação estatística completa com outros quarterbacks.
+
+Os testes verificam o snapshot, totais incoerentes e ausência de participações. Quando não há participações, a conversão é indisponível, em vez de um zero enganoso.
+
+Revisão implementada com assistência de IA. O objetivo é demonstrar uma pergunta bem delimitada, definição de denominadores e validação antes da conclusão.
+
+[Portfólio](https://github.com/llfaraco)

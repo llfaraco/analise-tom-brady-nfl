@@ -1,0 +1,11 @@
+{
+  "player": "Tom Brady",
+  "career_seasons": 23,
+  "super_bowl_appearances": 10,
+  "super_bowl_wins": 7,
+  "appearance_share_of_career_seasons": 0.43478260869565216,
+  "win_share_of_super_bowl_appearances": 0.7,
+  "source_url": "https://www.buccaneers.com/news/tom-brady-career-stats-records-nfl-2000-2022-patriots-bucs",
+  "scope": "Resumo histórico de carreira; temporadas incluem 2000 e 2008, sem tratá-las como temporadas completas de titular.",
+  "interpretation": "Proporções descritivas do histórico; não são probabilidades de sucesso futuro nem medida causal de contribuição individual."
+}
